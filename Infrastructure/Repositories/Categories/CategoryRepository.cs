@@ -1,5 +1,5 @@
 ﻿
-using Domain.Interfaces.CategoriaRepository;
+using Domain.Interfaces.CategoryRepository;
 using Domain.Models.Categories;
 using Infrastructure.DatabaseContext;
 using Microsoft.EntityFrameworkCore;

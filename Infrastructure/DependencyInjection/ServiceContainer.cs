@@ -1,4 +1,4 @@
-﻿using Domain.Interfaces.CategoriaRepository;
+﻿using Domain.Interfaces.CategoryRepository;
 using Domain.Interfaces.ProductRepository;
 using Infrastructure.DatabaseContext;
 using Infrastructure.Repositories.Categories;

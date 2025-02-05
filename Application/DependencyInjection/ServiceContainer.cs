@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Application.Interfaces.Product;
+using Application.Services.ProductService;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +17,7 @@ namespace Application.DependencyInjection
 
             #region AddScoped
             //Adcionar as dependecias : AddScoped Service
+            services.AddScoped<IProductService, ProductService>();
             #endregion
 
 

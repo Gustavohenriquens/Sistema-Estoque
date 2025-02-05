@@ -22,7 +22,9 @@ namespace Infrastructure.Repositories.Products
         public async Task<Product> GetByIdAsync(int? id)
         {
             return await _context.Products
-                .Include(c => c.Category) //O id do produto que eu achar vai vir com o id da categoria para eu saber qual categoria é.
+                .Include(c => c.Category)  //O id do produto que eu achar vai vir com o id da categoria para eu saber qual categoria é.
+                .Include(p => p.Stock)     
+                .Include(p => p.Supplier)
                 .SingleOrDefaultAsync(x => x.Id == id);
         }
 
