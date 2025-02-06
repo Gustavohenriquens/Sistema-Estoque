@@ -30,6 +30,7 @@ namespace Application.Services.ProductService
             try
             {
                 var items = await _productRepository.GetItemsAsync();
+
                 return _mapper.Map<IList<ProductDTO>>(items);
             }
             catch (Exception ex)
@@ -87,6 +88,7 @@ namespace Application.Services.ProductService
                     throw new Exception("Stock not found!");
                 }
 
+
                 //Find supplier
                 var supplier = await _supplierRepository.GetByIdAsync(productDto.IdSupplier);
                 if (supplier != null)
@@ -98,10 +100,11 @@ namespace Application.Services.ProductService
                     throw new Exception("Supplier not found!");
                 }
 
+
                 await _productRepository.CreateAsync(productAdd);
             }
             catch(Exception ex)
-            {
+            {       
                 throw new Exception("Error adding product", ex);
             }
             

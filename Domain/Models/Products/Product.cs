@@ -1,13 +1,11 @@
 ﻿using Domain.Models.Categories;
+using Domain.Models.Movementation;
 using Domain.Models.Stocks;
 using Domain.Models.Suppliers;
-using System;
-using System.Collections.Generic;
+
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Domain.Models.Products
 {
@@ -58,5 +56,7 @@ namespace Domain.Models.Products
         [Column(TypeName = "decimal(18,2)")]        
         public decimal PriceSale { get; set; }
         public int Amount { get; set; }
+
+        public ICollection<Movement> Movements  { get; set; }
     }
 }

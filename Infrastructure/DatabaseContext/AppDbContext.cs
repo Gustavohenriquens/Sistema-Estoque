@@ -1,4 +1,5 @@
 ﻿using Domain.Models.Categories;
+using Domain.Models.Movementation;
 using Domain.Models.Products;
 using Domain.Models.Stocks;
 using Domain.Models.Suppliers;
@@ -24,6 +25,7 @@ namespace Infrastructure.DatabaseContext
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Supplier> Suppliers { get; set; }
+        public DbSet<Movement> Movements { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,4 +1,6 @@
-﻿using Application.Interfaces.Product;
+﻿using Application.Interfaces.Moviment;
+using Application.Interfaces.Product;
+using Application.Services.MovementService;
 using Application.Services.ProductService;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -18,6 +20,7 @@ namespace Application.DependencyInjection
             #region AddScoped
             //Adcionar as dependecias : AddScoped Service
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IMovementService, MovementService>();
             #endregion
 
 
